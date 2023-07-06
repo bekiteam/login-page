@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>login web</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <div class="l-text-effect">
+                <h1 class="type-brand"></h1>
+                <h3>description qisqacha malumot</h3>
+            </div>
+            <div class="l-img">
+                <img src="page-left.svg" alt="">
+            </div>
+            
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Login</h1>
+                <!--1F-->
+                <div class="textfield">
+                    <label for="person">person</label>
+                    <input type="text" name="user" placeholder="Ismingiz">
+                    
+                </div>
+                <!--F2-->
+                <div class="textfield">
+                    <label for="person">password</label>
+                    <input type="text" name="pass" placeholder="password">
+                  </div>
+
+                  <div class="btn-login">Login</div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script><!--cdn auto text-->
+    <script>
+        const typedStrings = [
+        'Assalomu Aleykum!',
+        'kompaniyangiz nomi.. da',
+        'ajoyib kuponga ega bo\'ling!',
+        'login tizimga kiring va bepul kuponlarga ega boling!'
+      ];
+      
+      const typedElement = document.querySelector('.type-brand');//Create the typed element and options
+      const typedOptions = {
+        strings: typedStrings,
+        typeSpeed: 90,
+        backSpeed: 40,
+        onComplete: function(self) {
+          if (self.loopCount === 2) {
+            const textBrandElement = document.querySelector('.type-brand');
+            textBrandElement.innerHTML = '';
+            textBrandElement.textContent = 'soloTem';
+            self.loop = false;
+          }
+        }
+      };    
+                    //Typed.js effect
+      const typed = new Typed(typedElement, typedOptions);
+    </script>
+</body>
+</html>
